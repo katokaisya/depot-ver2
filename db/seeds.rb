@@ -5,3 +5,15 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+Product.delete_all
+
+Product.transaction do
+  100.times do
+  Product.create(name: Faker::Commerce.product_name,
+                 description: Faker::Lorem.paragraphs,
+                 price: Faker::Commerce.price.to_i * 100 + 100,
+                 image: Faker::Avatar.image)
+  end
+end
+puts "#{Product.count}件 登録したよ！"

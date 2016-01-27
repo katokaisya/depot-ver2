@@ -13,13 +13,15 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 group :development, :test do
   gem 'sqlite3'
-  gem 'pry-byebug'  #pryは便利
-  gem 'pry-rails'   #pryは便利
-  gem 'faker'       #ダミーデータ生成
+  gem 'pry-byebug'      # pryは便利
+  gem 'pry-rails'       # pryは便利
+  gem 'faker'           # ダミーデータ生成
+  gem 'bullet'          # N+1問題を発見する
 end
 
 group :development do
   gem 'annotate'
+  gem 'i18n_generators' # 翻訳ファイル生成
   gem 'web-console', '~> 2.0'
   gem 'spring'
 end
@@ -31,6 +33,7 @@ end
 
 # auther's gems
   gem 'puma'
+  gem 'kaminari'  #ページネーション
   # gem 'activeadmin', '~> 1.0.0.pre2'
   # gem 'activeadmin', github: 'activeadmin/activeadmin'
   # gem 'devise'
@@ -38,4 +41,3 @@ end
   # gem 'active_admin_importable'#インポート用のgem
   # gem 'activeadmin-translate'
   # gem 'carrierwave'
-  # gem 'kaminari'  #ページネーション

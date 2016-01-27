@@ -1,0 +1,11 @@
+ja:
+  activerecord:
+    models:
+      product: initial-scale=1, minimum-scale=1, width=device-width  #g
+
+    attributes:
+      product:
+        description: initial-scale=1, minimum-scale=1, width=device-width  #g
+        image: initial-scale=1, minimum-scale=1, width=device-width  #g
+        name: initial-scale=1, minimum-scale=1, width=device-width  #g
+        price: initial-scale=1, minimum-scale=1, width=device-width  #g

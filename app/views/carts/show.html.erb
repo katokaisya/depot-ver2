@@ -1,0 +1,27 @@
+<h1>カート</h1>
+
+<table class="table table-striped">
+<thead>
+  <tr>
+    <th>No</th>
+    <th>商品名</th>
+    <th>価格</th>
+    <th>No</th>
+  </tr>
+</thead>
+<tbody>
+<% @cart.cart_items.each_with_index do |item, i| %>
+  <tr>
+    <td><%= i+1 %></td>
+    <td><%= item.product.name %></td>
+    <td><%= number_to_currency(item.product.price) %></td>
+    <td><%= button_to('削除', item, method: :delete, data:{confirm: '本当によいですか？'}) %></td>
+  </tr>
+<% end %>
+
+</tbody>
+</table>
+
+  <p id="pageback" class="btn01 cleafix">
+  <a href="javascript:history.go(-1)">&lt;&lt;前ページに戻る</a>
+  </p>
